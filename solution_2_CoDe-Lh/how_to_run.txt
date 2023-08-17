@@ -1,0 +1,11 @@
+train:
+
+python train_final.py --csv_train 'dataset/SynthASpoof/train.csv'
+
+test:
+
+python test.py --weight_path '199.pth' --csv_test 'dataset/CASIA-CEFA/test.csv'
+
+The output on screen should look like:
+`AUC@ROC: 0.8858, HTER: 0.2007, APCER: 0.2007, BPCER: 0.2007, EER: 0.2007, TH: -4.372185707092285, Acc: 0.8028`
+And the prediction.csv file with `image_path,true_label,prediction_score,prediction_label` will be saved.
